@@ -1,0 +1,35 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* Deixa a rolagem da página mais suave quando for deslocar para alguma seção interna */
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h3{
+    font-family: "Exo 2", sans-serif;
+    color: var(--cor-do-texto);
+    font-weight: 400;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.outer-shadow { /* Efeito de sombra nos ícones de redes sociais e foto de perfil */
+    box-shadow: 3px 3px #828aa8, /* sombra de baixo do ícone */
+    -3px -3px 3px #3e688b; /* sombra de cima do ícone - esbranquiçada */
+    border-radius: 50px 50px;
+}
+
+.sobre-mim,
+.habilidades,
+.projetos,
+.contato{
+    margin-top: 50px;
+    color: var(--cor-do-texto);
+    scroll-margin-top: 80px; /* para não passar do título da seção */
+}

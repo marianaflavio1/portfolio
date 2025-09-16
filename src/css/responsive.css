@@ -1,0 +1,144 @@
+/* ####  1440px  #### */
+@media(max-width: 1440px){
+/* APRESENTAÇÃO */
+.hero{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.hero .informacoes-iniciais{
+    margin: 0;
+}
+
+.hero .informacoes-iniciais p{
+    text-align: center;
+}
+
+.hero .informacoes-iniciais p:nth-child(1){ /* 1º parágrafo "Bem-vindo" */
+    padding: 12rem 0 6rem 0;;
+    font-size: 4rem;
+}
+
+.hero .informacoes-iniciais p:nth-last-child(2){ /* 2º parágrafo "Desenvolvedora frontend" */
+    font-size: 2rem;
+    padding: 2rem 0 5rem 0;
+}
+
+.informacoes-iniciais .redes-sociais{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 3rem;
+}
+
+.hero::after{
+    display: none; /* tira a setinha preta */
+}
+
+/* SOBRE MIM */
+.sobre-mim .container-sobre-mim{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sobre-mim .container-sobre-mim a{
+    display: none; /* não mostrar a segunda foto */
+}
+
+.sobre-mim .container-sobre-mim .item{
+    max-width: 100%;
+    text-align: center;
+    padding: 5px 30px;
+}
+
+.sobre-mim .container-sobre-mim .item p{
+    font-size: 2rem;
+}
+
+.sobre-mim .item{
+    max-width: 90vw;
+    padding: 0 10px;
+}
+
+.sobre-mim .item p{
+    font-size: 1.5rem;
+}
+
+/* HABILIDADES */
+.habilidades .container-habilidades{
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.habilidades h3{
+    padding-bottom: 10px;
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidades .container-habilidades .habilidades-pessoais{
+    flex-basis: 350px;
+}
+
+}
+
+/* ####  768px  #### */
+@media(max-width: 798px){
+/* HEADER */
+.header .menu{ /* pro menu hamburguer aparecer */
+    display: flex;
+}
+
+.header .header-container nav ul{ /* Estilos para o menu quando ele estiver visível */
+    display: none;
+    position: absolute; /* <<< Adiciona position: absolute */
+    top: 100%; /* Posiciona 100% abaixo do elemento pai (o header) */
+    right: 0;
+    width: 100vw; /* Faz o menu ocupar 100% da largura da tela */
+    height: auto; /* Faz o menu ocupar a altura necessária */
+    padding: 10px 50px;
+    background-color: var(--cor-primaria);
+    z-index: 2; /* Garante que ele fique acima de tudo */
+}
+
+.header .header-container nav ul li{
+    padding: 5px 0; /* Distância entre os itens do menu hamburguer */
+}
+
+.header input:checked ~ ul{
+    display: block; /* pro menu aparecer qndo clicar no hamburguer */
+}
+
+.header .header-container nav ul a{
+    text-align: center;
+    padding: 15px;
+    display: block;
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade{
+    padding: 0;
+}
+}
+
+/* ####  425px  #### */
+@media(max-width: 425px){
+
+.header .logo{
+    display: none; /* tira o "Mariana Flavio" */
+}
+
+.hero .informacoes-iniciais p:nth-child(1){ /* 1º parágrafo */
+    font-size: 4rem;
+}
+.hero h2{
+    font-size: 3rem;
+    text-align: center;
+}
+}

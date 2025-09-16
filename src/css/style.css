@@ -1,0 +1,256 @@
+/* CABEÇALHO */
+body{
+    background-color: var(--cor-primaria);
+}
+
+.header{
+    background-color: var(--cor-primaria);
+    position: fixed;
+    top: 0;
+    width: 100%; /* o cabeçalho pega 100% da largura */
+    z-index: 100; /* Garante que o cabeçalho fique em cima de outros elementos */
+    padding: 10px;
+    border-bottom: solid 1px var(--cor-secundaria);
+}
+
+.header .header-container{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    min-height: 55px;
+    list-style-type: none;
+}
+
+.header .header-container nav{
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.header a{
+    color:#ffffff;
+}
+
+/* APRESENTAÇÃO */
+.hero{
+    display: flex;
+    height: 95vh; /* não colocar 100 para o usuário ver que tem mais conteúdo pra baixo */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* é o pai do position absolute (setinha preta) */
+    gap: 20px;
+    color: var(--cor-do-texto);
+}
+
+.hero .informacoes-iniciais{
+    margin-right: 40px;
+}
+
+.hero .informacoes-iniciais p:nth-child(1){ /* 1º parágrafo */
+    font-size: 5rem;
+    padding-bottom: 60px;
+}
+
+.hero h2{
+    font-weight: 500;
+    text-transform: uppercase; /* deixar tudo MAIÚSCULO */
+    font-size: 4rem;
+    padding-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+.hero .informacoes-iniciais p:nth-last-child(2){ /* 2º parágrafo */
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--cor-do-texto-secundario);
+}
+
+.redes-sociais a {
+    display: inline-block; /* para conseguir mexer na altura e largura da sombra dos ícones */
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+    text-align: center; /* centraliza horizontalmente */
+    color: var(--cor-do-texto);
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease; /* o transition vai no elemento e não no hover */
+  }
+  
+  .redes-sociais a i {
+    line-height: 40px; /* altura da linha para centralizar verticalmente no círculo (tem que ser a mesma da altura e largura do cículo) */
+  }
+  
+  .redes-sociais a:hover {
+    transform: scale(1.1);
+  }
+
+.hero .foto img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;   /* transforma em círculo */
+    object-fit: cover;    /* corta o excesso e preenche */
+}
+
+.hero:after{
+    content: url('../images/seta_cinza.png');
+    position: absolute; /* é filho do position relative do hero */
+    height: 30px;
+    bottom: 30px;
+    animation: movimento-da-seta 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes movimento-da-seta{
+    0% { -webkit-transform: translateY(0); opacity: 0.9; }
+    100% { -webkit-transform: translateY(0.5rem); opacity: 0.4; }
+}
+
+/* SOBRE MIM */
+.container-sobre-mim{
+    color: var(--cor-do-texto-secundario);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mim .foto-sobre-mim{
+    max-width: 250px;
+    height: auto;
+    margin-right: 80px;
+}
+
+.sobre-mim .item{
+    display: flex;
+    padding: 0px 30px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50vw;
+    flex-direction: column;
+}
+
+.sobre-mim .item p{
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* HABILIDADES */
+.habilidades .container-habilidades {   
+    color: var(--cor-do-texto-secundario);
+    display: flex;
+    text-align: center; 
+    align-items: center;   
+    justify-content: center;
+    padding: 20px 60px;
+    gap: 30px;
+}
+
+.habilidades .sub-habilidades{
+    font-size: 3rem;
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade{
+    padding: 10px 20px;
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade p,
+.habilidades .container-habilidades .informacoes-da-habilidade h4,
+.habilidades .container-habilidades .informacoes-da-habilidade .logo i{
+    transition: all 0.5s ease; 
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade:hover p,
+.habilidades .container-habilidades .informacoes-da-habilidade:hover h4,
+.habilidades .container-habilidades .informacoes-da-habilidade:hover .logo i{
+    color: var(--cor-secundaria);
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade p{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade h4{
+    font-size: 3rem;
+    padding: 30px;
+    margin: 10px;
+}
+
+.habilidades .container-habilidades .informacoes-da-habilidade .logo i{
+    font-size: 5rem;
+}
+
+/* PROJETOS */
+.container-projetos{
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15rem;
+    padding: 30px;
+    margin-bottom: 8rem;
+    justify-content: center;
+}
+
+.projetos h3{
+    margin-bottom: 30px;
+}
+
+.container-projetos img{
+    width: 30rem;
+    height: 30rem;
+    transition: 0.3s;
+}
+
+.container-projetos a:hover img{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.outer-shadow-projects { /* Efeito de sombra nos ícones de redes sociais e foto */
+    box-shadow: 5px 3px var(--cor-secundaria), /* sombra de baixo do ícone */
+    -4px -3px 3px #203444; /* sombra de cima do ícone - esbranquiçada */
+    border-radius: 30px;
+}
+
+/* FOOTER */
+.footer{
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--cor-secundaria);
+}
+
+.footer h3{
+    margin-bottom: 20px;
+}
+
+.footer i:hover{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.footer .social i{
+    color: var(--cor-do-texto);
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+.footer .social a{
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer .social a i{
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-secundaria);
+    width: 60px;
+    height: 60px;
+    line-height: 55px; /* para centralizar verticalmente */
+    text-align: center; /* para centralizar horizontalmente */
+    border-radius: 50%;
+}
